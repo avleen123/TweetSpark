@@ -1,6 +1,7 @@
 import React from 'react';
 import { Copy } from 'react-feather';
 import styles from './TwitterPage.module.css';
+import TwitterCard from "../TwitterCard.js/TwitterCard";
 function TwitterPage() {
   return (
     <div className={styles.container}>
@@ -8,7 +9,7 @@ function TwitterPage() {
       <div className={styles.topSection}>
         <label>What's in your mind today ?</label>
         <textarea placeholder="Writer here..."/>
-        <button>Generate Prompts</button>
+        <button className='button'>Generate Prompts</button>
         </div>
         <div className={styles.prompts}>
         <div className={styles.prompt}>
@@ -21,8 +22,17 @@ function TwitterPage() {
         </div>
         </div>
         </div>
-        <div className={styles.mainRight}></div>
- </div>
+        
+        <div className={styles.mainRight}>
+        <p className={styles.heading}>Your tweet</p>
+        <p className={styles.btn}>+Write a tweet</p>
+        <div className={styles.cards}>
+          <TwitterCard/>
+        <TwitterCard/>
+        <TwitterCard/>
+        </div>
+    </div>
+   </div>
   );
 }
 
