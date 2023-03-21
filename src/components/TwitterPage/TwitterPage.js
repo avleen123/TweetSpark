@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Copy } from 'react-feather';
 import styles from './TwitterPage.module.css';
 import TwitterCard from "../TwitterCard.js/TwitterCard";
+import { generateImageForTweet, generatePrompts } from '../../apis/twitter';
 function TwitterPage() {
+  useEffect(()=>{
+   generateImageForTweet('Earth is flat')
+  },[]);
   return (
     <div className={styles.container}>
     <div className={styles.mainLeft}>
