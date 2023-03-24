@@ -1,5 +1,4 @@
-const oaiKey = "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";
-
+const oaiKey="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";
 export const generatePrompts = async (prompt) => {
   try {
     const res = await fetch(`https://api.openai.com/v1/completions`, {
