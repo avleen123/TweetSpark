@@ -1,4 +1,5 @@
-const oaiKey="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";
+const oaiKey=process.env.REACT_APP_OAIKEY
+;
 export const generatePrompts = async (prompt) => {
   try {
     const res = await fetch(`https://api.openai.com/v1/completions`, {

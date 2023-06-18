@@ -3,6 +3,9 @@ import { Copy, Plus, X } from "react-feather";
 
 import styles from "./TwitterCard.module.css";
 
+import { ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
+import { toast } from "react-toastify";
 function TwitterCard({
   tweet = "",
   onTweetChange,
@@ -15,9 +18,13 @@ function TwitterCard({
 }) {
   const [isEditing, setIsEditing] = useState(false);
 
-  const handleCopy = async (text) => {
-    if (window.navigator?.clipboard?.writeText)
-      await window.navigator.clipboard.writeText(text);
+  const handleCopy = async (text) => { 
+    if (window.navigator?.clipboard?.writeText) { 
+      await window.navigator.clipboard.writeText(text); 
+      toast.success("Text copied to clipboard!", { 
+        position: toast.POSITION.TOP_CENTER 
+      }); 
+    } 
   };
 
   const progress = (tweet.length / 280) * 100;
@@ -26,6 +33,7 @@ function TwitterCard({
 
   return (
     <div className={styles.container}>
+      <ToastContainer/>
       <div
         className={`icon ${styles.close}`}
         onClick={() => (onClose ? onClose() : "")}

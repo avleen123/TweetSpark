@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Copy } from "react-feather";
 
 import TwitterCard from "../TwitterCard.js/TwitterCard";
-
+import { ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
+import { toast } from "react-toastify";
 import {
   generateImageForTweet,
   generatePrompts,
@@ -30,10 +32,14 @@ function TwitterPage() {
   const generateUniqueId = () =>
     (Math.random() * 98975958 + Date.now()).toString(16);
 
-  const handleCopy = async (text) => {
-    if (window.navigator?.clipboard?.writeText)
-      await window.navigator.clipboard.writeText(text);
-  };
+    const handleCopy = async (text) => { 
+      if (window.navigator?.clipboard?.writeText) { 
+        await window.navigator.clipboard.writeText(text); 
+        toast.success("Text copied to clipboard!", { 
+          position: toast.POSITION.TOP_CENTER 
+        }); 
+      } 
+    };
 
   const handleThreadDeletion = (index) => {
     const tempThread = [...thread];
@@ -150,6 +156,7 @@ function TwitterPage() {
 
   return (
     <div className={styles.container}>
+      <ToastContainer/>
       <div className={styles.mainLeft}>
         <div className={styles.topSection}>
           <label>What's in your mind today ?</label>
