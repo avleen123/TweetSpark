@@ -1,3 +1,8 @@
+![https://github.com/avleen123/TweetSpark/src/assets/TweetSpark.png](https://github.com/avleen123/TweetSpark/blob/main/src/assets/TweetSpark.png)
+
+# Live Demonstration of Project
+![https://github.com/avleen123/TweetSpark/src/assets/demo.mp4](https://github.com/avleen123/TweetSpark/blob/main/src/assets/demo.mp4)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
