@@ -1,7 +1,7 @@
 ![https://github.com/avleen123/TweetSpark/src/assets/TweetSpark.png](https://github.com/avleen123/TweetSpark/blob/main/src/assets/TweetSpark.png)
 
 # Live Demonstration of Project
-![https://github.com/avleen123/TweetSpark/src/assets/demo.mp4](https://github.com/avleen123/TweetSpark/blob/main/src/assets/demo.mp4)
+![https://github.com/avleen123/TweetSpark/src/assets/demo.gif](https://github.com/avleen123/TweetSpark/blob/main/src/assets/demo.gif)
 
 # Getting Started with Create React App
 
